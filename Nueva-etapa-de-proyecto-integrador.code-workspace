@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "public"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Astral-Clock",
+    "liveServer.settings.port": 5501
+  }
+}

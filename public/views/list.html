@@ -1,0 +1,61 @@
+<div class="container-list">
+  <h1>List</h1>
+
+  <form autocomplete="off">
+    <!-- Campo de nombre -->
+    <label for="name">Nombre</label>
+    <input type="text" id="name" />
+    <div></div>
+
+    <!-- Campo de price -->
+    <label for="price">Precio</label>
+    <input type="text" id="price" />
+    <div></div>
+
+    <!-- Campo de stock -->
+    <label for="stock">Stock</label>
+    <input type="text" id="stock" />
+    <div></div>
+
+    <!-- Campo de category -->
+    <label for="category">Categoría</label>
+    <input type="text" id="category" />
+    <div></div>
+
+    <!-- Campo de details -->
+    <label for="details">Detalles</label>
+    <input type="text" id="details" />
+    <div></div>
+
+    <!-- Campo de photo -->
+    <!-- <label for="photo">Foto</label>
+    <input type="text" id="photo" />
+    <div></div> -->
+
+    <div id="drop-area">
+      <p>Upload img</p>
+      <input type="file" id="photo" accept="image/*" /><label
+        class=""
+        for="photo"
+        >File Dialog</label
+      >
+      <progress id="progress-bar" max="100" value="0"></progress>
+      <div id="gallery">
+        <img src="" alt="" />
+      </div>
+    </div>
+
+    <!-- Campo de send -->
+    <label for="send">Envío</label>
+    <input type="checkbox" id="send" />
+    <div></div>
+
+    <button>onclick="saveProduct(id)">Add</button>
+  </form>
+
+  <hr />
+  <h2>List of products</h2>
+  <hr />
+
+  <div id="list-products"></div>
+</div>

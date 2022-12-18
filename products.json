@@ -1,0 +1,24 @@
+[
+	{
+		"name": "product a",
+		"price": "123",
+		"stock": "5",
+		"mark": "sex",
+		"category": "any",
+		"detalis": "...",
+		"phote": "url",
+		"send": "true",
+		"id": 1
+	},
+	{
+		"name": "product b",
+		"price": "123",
+		"stock": "5",
+		"mark": "sex",
+		"category": "any",
+		"detalis": "...",
+		"phote": "url",
+		"send": "true",
+		"id": 2
+	}
+]

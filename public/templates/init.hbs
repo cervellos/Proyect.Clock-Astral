@@ -1,0 +1,23 @@
+{{#if list.length}}
+  {{#each list}}
+    <a
+      href="https://sony.com"
+      class="card"
+      onclick="addwhishList(event,{{id}},this)"
+    >
+      <article class="card__article">
+        <div class="card__image-container">
+          <img class="card__image" src="{{foto}}" alt="{{nombre}}" />
+        </div>
+        <div class="card__content">
+          <h2 class="card__heading">{{nombre}}</h2>
+          <div class="card__description">
+            <p>{{details}}</p>
+          </div>
+        </div>
+      </article>
+    </a>
+  {{/each}}
+{{else}}
+  <h2>do not find products</h2>
+{{/if}}

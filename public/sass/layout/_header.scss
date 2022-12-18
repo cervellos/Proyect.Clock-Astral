@@ -1,0 +1,226 @@
+/*******************
+HEADER
+**********/
+.main-header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color--dark-back);
+  width: 100vw;
+  height: 5rem;
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
+    & {
+      flex-direction: column;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) {
+    & {
+      flex-direction: column;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}
+
+#menu {
+  display: none;
+
+  &:checked + .nav-bar {
+    display: block;
+  }
+  &:checked ~ .search-bar .menu-toggle__laber {
+    background-color: yellow;
+  }
+}
+
+/* NAV BAR*/
+
+.nav-bar {
+  background-color: var(--color--dark-back);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(0);
+  &__show {
+    transform: translateY(-100%);
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    list-style: none;
+  }
+  &__nav-item {
+    padding: 1px;
+  }
+  &__nav-link {
+    text-decoration: none;
+    font-size: 50px;
+
+    &:hover {
+      color: #ffd300;
+      background: inherit;
+      text-decoration: none;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
+    &,
+    &__nav-list {
+      flex-direction: column;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) {
+    &,
+    &__nav-list {
+      flex-direction: row;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    &,
+    &__nav-list {
+      flex-direction: row;
+    }
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
+    &__nav-link,
+    &__nav-item {
+      display: none;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) {
+    &__nav-link,
+    &__nav-item {
+      display: block;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    &__nav-link,
+    &__nav-item {
+      display: block;
+    }
+  }
+}
+/* SEARCH BAR*/
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  &__row {
+    display: flex;
+    direction: row;
+    flex-wrap: wrap;
+    height: 6rem;
+  }
+  &__logo-container {
+    background-color: #ffd300;
+    text-indent: -999px;
+    background: url("../../img/logo.png");
+    background-repeat: no-repeat;
+    width: 5.9em;
+    max-width: 100%;
+    padding: 0;
+  }
+  &__form-container {
+    display: flex;
+    justify-content: center;
+  }
+  &__form-label {
+    display: none;
+    color: #333;
+    opacity: 0.5;
+  }
+  &__form-search {
+    border-radius: 5px;
+    width: 70%;
+  }
+  &__form-submit {
+    border-radius: 5px;
+    width: 10em;
+  }
+  &__whishList-container {
+    background-color: #ffd300;
+    text-indent: -999px;
+    background: url("../../img/icon-buyingEmpty.png");
+    background-repeat: no-repeat;
+    width: 6em;
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
+    & {
+      flex-direction: column;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) {
+    & {
+      flex-direction: row;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    & {
+      flex-direction: row;
+    }
+  }
+}
+/* MENU TOOGLe*/
+
+.menu-toggle {
+  display: flex;
+  max-width: 100%;
+  margin: auto;
+  padding: 1px;
+  position: fixed;
+  right: 1%;
+  top: 15%;
+  transform: translate(-5%, -50%);
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
+    & {
+      display: fixed;
+      right: 0%;
+      top: 5%;
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media (min-width: 992px) {
+      & {
+        display: none;
+        right: 0%;
+        top: 5%;
+      }
+    }
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      & {
+        display: none;
+        right: 1%;
+        top: 50%;
+      }
+    }
+
+    cursor: pointer;
+    &__label {
+      display: block;
+      background-color: black;
+      height: 100%;
+    }
+  }
+}

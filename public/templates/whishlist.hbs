@@ -1,0 +1,45 @@
+{{#if whishlist.length}}
+  <button class="btn-close" id="btn_closeWhislist">Enviar</button>
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Marca</th>
+      <th>Foto</th>
+      <th>Cantidad</th>
+      <th>Envio</th>
+      <th>Acción</th>
+    </tr>
+
+    {{#each whishlist}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{price}}</td>
+        <td>{{mark}}</td>
+        <td>
+          <img
+            style="display:block; margin: 0 auto;"
+            src="{{picture}}"
+            width="50"
+            alt="{{name}}"
+          />
+        </td>
+        <td>{{stock}}</td>
+
+        {{#if send}}
+          <td>Si</td>
+        {{else}}
+          <td>No</td>
+        {{/if}}
+
+        <td>
+          <button
+            onclick="listController.deleteProductList({{id}})"
+          >delete</button>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+{{else}}
+  <h2>the list is empty</h2>
+{{/if}}

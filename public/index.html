@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <title>Astral-Clock</title>
+  </head>
+  <body>
+    <header id="header" class="main-header">
+        
+          <input type="checkbox" id="menu" />
+          
+          <nav class="nav-bar" id="wrapper">
+            <ul class="nav-bar__nav-list">
+              <li class="nav-bar__nav-item">
+                <a href="" id="init" class="nav-bar__nav-link"> Inicio </a>
+              </li>
+              <li class="nav-bar__nav-item">
+                <a href="" id="list" class="nav-bar__nav-link"> Alta </a>
+              </li>
+              <li class="nav-bar__nav-item">
+                <a href="" id="contact" class="nav-bar__nav-link"> Contacto </a>
+              </li>
+              <li class="nav-bar__nav-item">
+                <a href="" id="we" class="nav-bar__nav-link"> Nosotros </a>
+              </li>
+            </ul>
+                      <!-- search-bar -->
+                      
+                      <div class="search-bar">
+                  <div class="search-bar__row">
+                          
+             <div class="search-bar__logo-container">Logo</div>
+             <div class="search-bar__whishList-container" id="btn-whisList">C</div>
+                  </div>
+             <form action="" class="search-bar__form-container">
+               <label for="search" class="search-bar__form-label">Buscar</label>
+              <input
+                type="search"
+                class="search-bar__form-search"
+                id="search"
+              />
+              <input
+              type="submit"
+              class="search-bar__form-submit"
+              value="search"
+              />
+            </form>
+          </div>
+            
+            
+         
+          <!-- search-bar -->
+          <div class="menu-toggle" id="menu-toggle">
+            <img src="img/menu-toogle-icon.png" alt="">
+            <a data-nav-toggle="" href="" class="nav-toggle">
+            </a>
+            </div>
+          <!-- menu toogle -->
+      </header>
+
+
+      <!-- <header> -->
+      <div class="section-whishList"></div>
+      <main></main>
+      <footer></footer>
+    </div>
+
+    
+            
+         
+            
+  
+    
+    <!-- Codigo de librerias -->
+    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <!-- codigo de plantillas -->
+    <!-- Client -->
+    <script src="js/clients/http.client.js"></script>
+    <!-- Service -->
+    <script src="js/services/products.js"></script>
+    <script src="js/services/whishlist.js"></script>
+    <!-- Model -->
+    <script src="js/models/products.js"></script>
+    <script src="js/models/whishlist.js"></script>
+    <!-- controllers -->
+    <script src="js/controllers/products.js"></script>
+    <script src="js/controllers/whishlist.js"></script>
+    <!-- Menu -->
+    <script src="js/menu/list.js"></script>
+    <script src="js/menu/we.js"></script>
+    <script src="js/menu/contact.js"></script>
+    <script src="js/menu/init.js"></script>
+    <script src="js/menu/whishlist.js"></script>
+    <!-- codigo de arranque -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
