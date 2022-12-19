@@ -1,5 +1,5 @@
 const WhishlistModel = require("../model/whishlist");
-const model = WhishlistModel.get(process.env.PERSISTENCIA); // File ° MONGODB
+const model = WhishlistModel.get(process.env.PERSISTENCIA || "MONGODB"); // File ° MONGODB
 
 const saveWhishlist = async (whishlist) => {
   const whishlistSave = await model.createWhishlist(whishlist);

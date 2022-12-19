@@ -6,19 +6,19 @@ const whishlistSchema = mongoose.Schema({
   whishlist: Array,
 });
 
-//
+//model of documente storage
 const WhishlistModel = mongoose.model("whishlists", whishlistSchema);
 
 class WhishlistModelMongoDB {
-  //CRUD
+  //CRUD -> C
   async createWhishlist(whishlist) {
     try {
       const whishlistSave = new WhishlistModel({ whishlist });
       await whishlistSave.save();
       return whishlist;
     } catch (error) {
-      console.log("Errror" + error);
-      return;
+      console.log("Error in CreateWhislist in MONGODB.model" + error);
+      return {};
     }
   }
 }

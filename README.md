@@ -1,15 +1,18 @@
-db.productos.insertOne({
-nombre: 'Producto 1',
-precio: 1233,
-stock: 3,
-marca: 'Marca 1',
-categoria: 'Categoria 1',
-detalles: 'Detalles 1',
-foto: 'foto1.jpg',
-envio: true,
-})
+Hola! este es un proyecto de un ecomerce con js native
 
-db.product.insertMany([{
+# Pasos para levantar el ambiente
+
+1. Bajar el zip
+
+2. Copian .env.example
+
+3. Lo renombran a .env
+
+4. Le agregan el puerto. PORT=8080
+
+5. npm run dev
+
+dbcommerce.dwhishlists.insertMany([{
 nombre: 'Producto 2',
 precio: 1233,
 stock: 3,
