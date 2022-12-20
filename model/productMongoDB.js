@@ -9,7 +9,7 @@ const productSchema = mongoose.Schema({
   mark: String,
   category: String,
   detalis: String,
-  phote: String,
+  photo: String,
   Send: Boolean,
 });
 /**Modelo del documento */

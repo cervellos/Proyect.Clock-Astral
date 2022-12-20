@@ -18,7 +18,7 @@ class FormList {
   /**drag and drop */
   constructor(renderTableList, saveProduct) {
     // Referencias de las funciones
-    this.inputs = document.querySelectorAll("main form input");
+    this.inputs = document.querySelectorAll("main form input.data-validation");
     this.form = document.querySelector("main form");
     this.button = document.querySelector("main form button");
 
@@ -74,6 +74,15 @@ class FormList {
     });
 
     /**drag and drop */
+    const inputFoto = document.querySelector("#photo");
+
+    inputFoto.addEventListener("change", () => {
+      console.log("Cambió el input");
+
+      const files = inputFoto.files;
+
+      this.handleFiles(files);
+    });
   }
 
   // Para comprobar la validez de los campos
@@ -84,8 +93,7 @@ class FormList {
       this.inpustValid[2] &&
       this.inpustValid[3] &&
       this.inpustValid[4] &&
-      this.inpustValid[5] &&
-      this.inpustValid[6];
+      this.inpustValid[5];
 
     return !validity;
   }
