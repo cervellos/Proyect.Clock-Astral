@@ -10,7 +10,6 @@ class FormList {
     /^.+$/, // regexp mark
     /^.+$/, // regexp category
     /^.+$/, // regexp details
-    /^.+$/, // regephotooto
   ];
   /**drag and drop */
   imagenUp = "";
@@ -68,8 +67,7 @@ class FormList {
       });
     });
 
-    this.dropArea.addEventListener("drop", () => {
-      console.log(e);
+    this.dropArea.addEventListener("drop", (e) => {
       const dataTransf = e.dataTransfer;
       const files = dataTransf.files;
       this.handleFiles(files);
@@ -160,7 +158,7 @@ class FormList {
     const reader = new FileReader(); //
     reader.readAsDataURL(file);
     reader.onloadend = function () {
-      const image = document.querySelector("#gallery img");
+      const img = document.querySelector("#gallery img");
       img.src = reader.result;
     };
   }
@@ -183,12 +181,12 @@ class FormList {
 
     xhr.addEventListener("load", () => {
       if (xhr.status === 200) {
-        this.objImagen = JSON.parse(xhr.response);
-        this.imagenUp = objImagen.nombre;
+        const objImage = JSON.parse(xhr.response);
+        this.imagenUp = objImage.nombre;
       }
     });
 
-    formData.append("foto");
+    formData.append("photo", file);
     xhr.send(formData);
   };
   /**drag and drop */

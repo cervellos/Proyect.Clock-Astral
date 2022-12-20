@@ -20,7 +20,7 @@ const productModel = mongoose.model("products", productSchema);
 class ProductModelMongoDB {
   async conectDB() {
     try {
-      await mongoose.connect(process.env.URI_MONGODB_LOCAL);
+      await mongoose.connect(process.env.URI_MONGODB_REMOTA);
       console.log("base de datos");
     } catch (err) {
       console.warn(err + "este error");
