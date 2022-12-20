@@ -112,7 +112,7 @@ class FormList {
 
   // Mostrar u ocultar el mensaje
   setCustomValidityJS(messaje, index) {
-    let divs = document.querySelectorAll("form div"); //.mensaje de validacion
+    let divs = document.querySelectorAll("form .mns-valid"); //.mensaje de validacion
     divs[index].innerHTML = messaje;
     divs[index].style.display = messaje ? "block" : "none";
   }

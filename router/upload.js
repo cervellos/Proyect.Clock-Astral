@@ -5,5 +5,5 @@ const routerUpload = express.Router();
 const controller = require("../controller/upload");
 
 /**POST -requieres para agregar */
-routerUpload.post("/", upload.single("foto"), controller.uploadImagen);
+routerUpload.post("/", upload.single("photo"), controller.uploadImagen);
 module.exports = routerUpload;

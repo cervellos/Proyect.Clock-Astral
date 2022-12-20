@@ -18,6 +18,6 @@ app.get("/", (req, res) => {
 });
 const PORT = process.env.PORT;
 app.listen(PORT, (err) => {
-  if (err) throw new Error("Todo mal");
+  if (err) throw new Error("Todo mal" + err);
   console.log(`Todo arriba: En el puerto ${PORT}`);
 });

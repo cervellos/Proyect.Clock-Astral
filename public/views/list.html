@@ -1,31 +1,36 @@
 <div class="container-list">
-  <h1>List</h1>
+  <h1>Lista</h1>
 
   <form autocomplete="off">
     <!-- Campo de nombre -->
     <label for="name">Nombre</label>
     <input type="text" id="name" />
-    <div></div>
+    <div class="mns-valid"></div>
 
     <!-- Campo de price -->
     <label for="price">Precio</label>
     <input type="text" id="price" />
-    <div></div>
+    <div class="mns-valid"></div>
 
     <!-- Campo de stock -->
     <label for="stock">Stock</label>
     <input type="text" id="stock" />
-    <div></div>
+    <div class="mns-valid"></div>
+
+    <!-- Mark-->
+    <label for="mark">Marca</label>
+    <input type="text" class="data-validation" id="mark" />
+    <div class="mns-valid"></div>
 
     <!-- Campo de category -->
     <label for="category">Categoría</label>
     <input type="text" id="category" />
-    <div></div>
+    <div class="mns-valid"></div>
 
     <!-- Campo de details -->
     <label for="details">Detalles</label>
     <input type="text" id="details" />
-    <div></div>
+    <div class="mns-valid"></div>
 
     <!-- Campo de photo -->
     <!-- <label for="photo">Foto</label>
@@ -33,9 +38,13 @@
     <div></div> -->
 
     <div id="drop-area">
-      <p>Upload img</p>
+      <p>
+        Subir imagen al servidor con <b>file dialog</b> o con
+        <b>drag and drop</b> dentro del área punteada
+      </p>
+
       <input type="file" id="photo" accept="image/*" /><label
-        class=""
+        class="button"
         for="photo"
         >File Dialog</label
       >
@@ -48,13 +57,13 @@
     <!-- Campo de send -->
     <label for="send">Envío</label>
     <input type="checkbox" id="send" />
-    <div></div>
+    <div class="mns-valid"></div>
 
-    <button>onclick="saveProduct(id)">Add</button>
+    <button>Agregar</button>
   </form>
 
   <hr />
-  <h2>List of products</h2>
+  <h2>Listado</h2>
   <hr />
 
   <div id="list-products"></div>

@@ -1,14 +1,14 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "public"
-	}
-],
+    {
+      "path": "."
+    },
+    {
+      "path": "public"
+    }
+  ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "Astral-Clock",
+    "liveServer.settings.multiRootWorkspaceName": "Nueva-etapa-de-proyecto-integrador",
     "liveServer.settings.port": 5501
   }
 }

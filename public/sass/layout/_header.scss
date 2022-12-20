@@ -34,7 +34,7 @@ HEADER
     display: block;
   }
   &:checked ~ .search-bar .menu-toggle__laber {
-    background-color: yellow;
+    background-color: red;
   }
 }
 
@@ -67,7 +67,7 @@ HEADER
     font-size: 50px;
 
     &:hover {
-      color: #ffd300;
+      color: red;
       background: inherit;
       text-decoration: none;
     }
