@@ -7,7 +7,8 @@ class ProductService {
   }
 
   async saveProductService(product) {
-    let saveProduct = await http.post(this.URL_PRODUCTS, product);
+    const saveProduct = await http.post(this.URL_PRODUCTS, product);
+    console.log(saveProduct);
     return saveProduct;
   }
 

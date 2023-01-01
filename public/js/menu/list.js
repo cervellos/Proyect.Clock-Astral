@@ -190,7 +190,7 @@ class FormList {
     xhr.addEventListener("load", () => {
       if (xhr.status === 200) {
         const objImage = JSON.parse(xhr.response);
-        this.imagenUp = objImage.nombre;
+        this.imagenUp = objImage.name;
       }
     });
 

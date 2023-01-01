@@ -11,7 +11,7 @@ class ProductController extends ProductModel {
 
   async saveProduct(product) {
     const productSave = await productService.saveProductService(product);
-    //console.log(productSave)
+    console.log(productSave);
 
     this.products.push(productSave);
 

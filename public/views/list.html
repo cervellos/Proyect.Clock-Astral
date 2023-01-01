@@ -4,17 +4,17 @@
   <form autocomplete="off">
     <!-- Campo de nombre -->
     <label for="name">Nombre</label>
-    <input type="text" id="name" />
+    <input type="text" class="data-validation" id="name" />
     <div class="mns-valid"></div>
 
     <!-- Campo de price -->
     <label for="price">Precio</label>
-    <input type="text" id="price" />
+    <input type="text" class="data-validation" id="price" />
     <div class="mns-valid"></div>
 
     <!-- Campo de stock -->
     <label for="stock">Stock</label>
-    <input type="text" id="stock" />
+    <input type="text" class="data-validation" id="stock" />
     <div class="mns-valid"></div>
 
     <!-- Mark-->
@@ -24,12 +24,12 @@
 
     <!-- Campo de category -->
     <label for="category">Categoría</label>
-    <input type="text" id="category" />
+    <input type="text" class="data-validation" id="category" />
     <div class="mns-valid"></div>
 
     <!-- Campo de details -->
     <label for="details">Detalles</label>
-    <input type="text" id="details" />
+    <input type="text" class="data-validation" id="details" />
     <div class="mns-valid"></div>
 
     <!-- Campo de photo -->
@@ -43,11 +43,12 @@
         <b>drag and drop</b> dentro del área punteada
       </p>
 
-      <input type="file" id="photo" accept="image/*" /><label
-        class="button"
-        for="photo"
-        >File Dialog</label
-      >
+      <input
+        type="file"
+        id="photo"
+        accept="image/*"
+        class="data-validation"
+      /><label class="button" for="photo" rs>File Dialog</label>
       <progress id="progress-bar" max="100" value="0"></progress>
       <div id="gallery">
         <img src="" alt="" />
