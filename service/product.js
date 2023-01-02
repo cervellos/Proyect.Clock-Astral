@@ -4,7 +4,7 @@ const ProductValidation = require("../utils/producto.validation");
 const model = ProductModel.get(process.env.PERSISTENCIA); // File ° MONGODB
 
 const getProduct = async (id) => {
-  let product = await model.readProduct(id);
+  const product = await model.readProduct(id);
   return product;
 };
 

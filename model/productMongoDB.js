@@ -13,11 +13,12 @@ const productSchema = mongoose.Schema({
   Send: Boolean,
 });
 /**Modelo del documento */
-const productModel = mongoose.model("products", productSchema);
+const ProductModel = mongoose.model("products", productSchema);
 
 /**--------------------------- */
 
 class ProductModelMongoDB {
+  pk = "_id";
   async conectDB() {
     try {
       await mongoose.connect(process.env.URI_MONGODB_REMOTA);
@@ -27,37 +28,74 @@ class ProductModelMongoDB {
     }
   }
 
-  async readProducts() {
-    const products = await productModel.find({});
-    return products;
+  genIdKey(obj) {
+    // array o un obj
+    //console.log(obj)
+    if (Array.isArray(obj)) {
+      // true o false
+      // Sacarle el guión al ID de los documentos.
+      for (let i = 0; i < obj.length; i++) {
+        obj[i].id = obj[i][this.pk]; // this._id => this.id
+      }
+    } else {
+      obj.id = obj[this.pk]; // this._id => this.id
+    }
+
+    return obj;
   }
-  async readProduct(id) {
-    const products = await productModel.findById(id);
-    return products;
-  }
+
   /**CRUD c: create -> http method get*/
   async createProduct(product) {
     try {
-      const productSave = new productModel(product);
+      const productSave = new ProductModel(product);
       await productSave.save();
-      return productSave;
+
+      const products = await ProductModel.find({}).lean();
+      const productsSaved = products[products.length - 1];
+      return this.genIdKey(productsSaved);
     } catch (error) {
-      console.log("error" + error);
+      console.log("error en el createProduct" + error);
+    }
+  }
+  //CRUD READ ALL
+  async readProducts() {
+    try {
+      const products = await ProductModel.find({}).lean();
+      return this.genIdKey(products);
+    } catch (error) {
+      console.log(`Error en readProducts: ${error}`);
+      return {};
+    }
+  }
+  async readProduct(id) {
+    try {
+      const products = await ProductModel.findById(id).lean();
+      return this.genIdKey(products);
+    } catch (error) {
+      console.log("Error en ReadProduct:" + error);
+      return {};
     }
   }
   async updateProduct(id, product) {
     try {
-      const res = await productModel.updateOne({ _id: id }, { $set: product });
-      return res;
-    } catch (error) {}
+      const res = await ProductModel.updateOne({ _id: id }, { $set: product });
+      console.log(res);
+
+      const productUpdate = await ProductModel.findById(id).lean();
+      return this.gendIdKey(productUpdate);
+    } catch (error) {
+      console.log("Error en updateProduct" + error);
+      return {};
+    }
   }
-  /**CRUD c: create -> http method POST*/
+  /**CRUD c: delete -> http method POST*/
   async deleteProduct(id) {
     try {
-      await productModel.findByIdAndDelete(id);
-      return "ok deleteProduct";
+      const productDelete = await productModel.findByIdAndDelete(id);
+      return this.genIdKey(productDelete);
     } catch (error) {
       console.log("error en delete producto" + error);
+      return {};
     }
   }
 }
