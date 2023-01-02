@@ -13,7 +13,7 @@ const getProducts = async () => {
   return products;
 };
 const createProducts = async (product) => {
-  const errorValidation = ProductValidation.valid(product);
+  const errorValidation = ProductValidation.validity(product);
 
   if (!errorValidation) {
     const productCreate = await model.createProduct(product);
@@ -32,7 +32,7 @@ const deleteProduct = async (id) => {
   return productDelete;
 };
 const updateProduct = async (id, product) => {
-  const errorValidation = ProductValidation.valid(product);
+  const errorValidation = ProductValidation.validity(product);
 
   if (!errorValidation) {
     const productUpdate = await model.updateProduct(id, product);

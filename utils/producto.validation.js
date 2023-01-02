@@ -1,7 +1,7 @@
 const Joi = require("joi");
 
 class ProductValidation {
-  static valid(product) {
+  static validity(product) {
     const productSchema = Joi.object({
       name: Joi.string().min(3).max(20).required(),
       price: Joi.number().required(),
@@ -10,7 +10,7 @@ class ProductValidation {
       category: Joi.string().required(),
       details: Joi.string().required(),
       photo: Joi.string().empty(""),
-      send: Joi.boolean().required(),
+      sending: Joi.boolean().required(),
     });
 
     const { error } = productSchema.validate(product); // El método validate te devuelve un obj

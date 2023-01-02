@@ -1,5 +1,6 @@
-const { json } = require("express");
 const service = require("../service/product");
+
+/**-----------------------Get--------- */
 const getProducts = async (req, res) => {
   let id = req.params.id;
   try {
@@ -14,17 +15,20 @@ const getProducts = async (req, res) => {
     console.log(err);
   }
 };
+/**-----------------------create--------- */
 const createProducts = async (req, res) => {
   const product = req.body;
   const productCreate = await service.createProducts(product);
   return res.status(200).json(productCreate);
 };
+/**-----------------------update--------- */
 const updateProducts = async (req, res) => {
   const { id } = req.params;
   const product = req.body;
   const productUpdate = await service.updateProduct(id, product);
   res.send("todo pelota");
 };
+/**-----------------------delete--------- */
 const deleteProducts = async (req, res) => {
   const { id } = req.params;
   if (!id) {

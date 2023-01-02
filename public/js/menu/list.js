@@ -100,7 +100,7 @@ class FormList {
 
   // Validar campos
   validity(value, validator, index) {
-    //console.log(value, validator, index)
+    console.log(value, validator, index);
 
     if (!validator.test(value)) {
       this.setCustomValidityJS("Este campo no es válido", index);

@@ -10,7 +10,7 @@ const productSchema = mongoose.Schema({
   category: String,
   detalis: String,
   photo: String,
-  Send: Boolean,
+  sending: Boolean,
 });
 /**Modelo del documento */
 const ProductModel = mongoose.model("products", productSchema);
