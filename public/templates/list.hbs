@@ -33,13 +33,13 @@
         {{/if}}
         <td>
           {{#if ../valids}}
-            <button onclick="productoController.updateProducts({{id}})">Update</button>
+            <button onclick="productoController.updateProducts({{id}})">actualizar</button>
           {{else}}
-            <button disabled onclick="productoController.updateProducts({{id}})">Update</button>
+            <button disabled onclick="productoController.updateProducts({{id}})">actualizar</button>
           {{/if}}
         </td>
         <td>
-            <button onclick="productController.deleteProduct({{id}})">delete</button>
+            <button onclick="productController.deleteProduct({{id}})">borrar</button>
         </td>
       </tr>
     {{/each}}
