@@ -132,6 +132,7 @@ HEADER
     background-color: #ffd300;
     text-indent: -999px;
     background: url("../../img/logo.png");
+    background-size: contain;
     background-repeat: no-repeat;
     width: 5.9em;
     max-width: 100%;
@@ -160,11 +161,12 @@ HEADER
     background: url("../../img/icon-buyingEmpty.png");
     background-repeat: no-repeat;
     width: 6em;
+    filter: invert(1);
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media (min-width: 768px) {
     & {
-      flex-direction: column;
+      flex-direction: row;
     }
   }
   /* Large devices (laptops/desktops, 992px and up) */
